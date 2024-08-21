@@ -1,0 +1,24 @@
+package ObjectRepositories;
+
+import Utils.ReusableMethods;
+import io.appium.java_client.AppiumBy;
+import org.openqa.selenium.By;
+
+public class LoginpageObject {
+    public static By permissionKey= AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.android.permissioncontroller:id/permission_allow_foreground_only_button\")");
+    public static By allowButton=AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.android.permissioncontroller:id/permission_deny_button\")");
+    public static By threeLineButton=AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.ImageView\").instance(0)");
+    public static By signIn=AppiumBy.androidUIAutomator("new UiSelector().description(\"Sign In\")");
+    public static By continueWithGoogle=AppiumBy.androidUIAutomator("new UiSelector().description(\"Continue with Google\")");
+    public static By continueWithEmail=AppiumBy.androidUIAutomator("new UiSelector().description(\"Continue with Email\")");
+    public static By continueWithAnotherWay=AppiumBy.androidUIAutomator("new UiSelector().description(\"Continue another way\")");
+    public static By emailField=AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.EditText\")");
+    public static By continueButton=AppiumBy.androidUIAutomator("new UiSelector().description(\"Continue\")");
+    public static By otpInputtingField=AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.EditText\").instance(0)");
+    public static By alertMessage=AppiumBy.androidUIAutomator("new UiSelector().description(\"OTP doesnt matched\")");
+
+
+    //Data
+    public static String mailId=ReusableMethods.generateRandomGmail();
+    public static String otp="4444";
+}
