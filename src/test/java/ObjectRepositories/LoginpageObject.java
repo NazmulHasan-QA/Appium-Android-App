@@ -16,9 +16,14 @@ public class LoginpageObject {
     public static By continueButton=AppiumBy.androidUIAutomator("new UiSelector().description(\"Continue\")");
     public static By otpInputtingField=AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.EditText\").instance(0)");
     public static By alertMessage=AppiumBy.androidUIAutomator("new UiSelector().description(\"OTP doesnt matched\")");
+    public static By backButton=AppiumBy.androidUIAutomator("new UiSelector().className(\"android.view.View\").instance(5)");
+    public static By loginWithMobile=AppiumBy.androidUIAutomator("new UiSelector().description(\"Log in with Mobile\")");
+    public static By phoneField=AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.EditText\")");
+    public static By confirmationMessage=AppiumBy.androidUIAutomator("new UiSelector().description(\"OTP has been sent to your phone. Please check!\")");
 
 
     //Data
     public static String mailId=ReusableMethods.generateRandomGmail();
     public static String otp="4444";
+    public static String invalidPhone="05284876t6464";
 }

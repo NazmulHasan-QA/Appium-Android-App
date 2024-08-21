@@ -30,6 +30,18 @@ public class LogInPage {
         assertTrue(ReusableMethods.verifyElementsPresent(alertMessage,driver),"Login Successfully");
 
     }
+    public void enterInvalidPhoneFormatForOtp(AppiumDriver driver)
+    {
+        ReusableMethods.click(backButton,driver);
+        ReusableMethods.click(signIn,driver);
+        ReusableMethods.click(continueWithAnotherWay,driver);
+        ReusableMethods.click(loginWithMobile,driver);
+        ReusableMethods.click(phoneField,driver);
+        ReusableMethods.waitUntilPerformDataSendAction(phoneField,driver,invalidPhone);
+        ReusableMethods.click(continueButton,driver);
+        assertFalse(ReusableMethods.verifyElementsPresent(confirmationMessage,driver),"Otp send");
+
+    }
 
 
 }

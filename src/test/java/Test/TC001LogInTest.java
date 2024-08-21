@@ -18,4 +18,9 @@ public class TC001LogInTest extends Base {
         logObj.loginWthInvalidOtp(driver);
         //git remote add origin
     }
+    @Test(priority = 3)
+    public void nterInvalidPhoneFormatForOtpTest()
+    {
+        logObj.enterInvalidPhoneFormatForOtp(driver);
+    }
 }
