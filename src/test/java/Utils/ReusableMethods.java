@@ -3,17 +3,23 @@ import java.util.Properties;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import javax.mail.*;
 
+
 import java.time.Duration;
 import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static Test.Base.driver;
 
 
 public class ReusableMethods {
@@ -45,7 +51,8 @@ public class ReusableMethods {
         return element.isDisplayed();
     }
 
-    public static void sendData(By path, AppiumDriver driver, String text) {
+    public static void sendData(By path, AppiumDriver driver, String text)
+    {
         WebElement element = findElement(path, driver);
         element.sendKeys(text);
     }
@@ -73,9 +80,13 @@ public class ReusableMethods {
         element.click();
     }
 
-    public static void scrollIntoElement(By path, AppiumDriver driver) {
-        WebElement el = findElement(path, driver);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", el);
+    public static void scrollIntoElement(By path ,AppiumDriver river)
+    {
+        while (driver.findElements(path).isEmpty()) {
+            scrollDown(driver);
+        }
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(path));
     }
 
     public static void scrollDown(AppiumDriver driver) {
@@ -240,5 +251,5 @@ public class ReusableMethods {
     }
 
 
-    }
+}
 
