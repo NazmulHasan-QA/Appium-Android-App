@@ -128,7 +128,7 @@ public class ReusableMethods {
     public static boolean waitUntilPerformIsDisplayAction(By path, AppiumDriver driver) {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(path));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(path));
 
         // Perform an action on the element
         return element.isDisplayed(); // Example action
