@@ -249,6 +249,21 @@ public class ReusableMethods {
 
         return null; // OTP not found
     }
+    public static String getTextFromMobileElements(By path, AppiumDriver driver) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(path));
+
+        // First, try to get the text using getText()
+        String text = element.getText();
+
+        // If getText() returns an empty string or null, try to get the content-desc attribute
+        if (text == null || text.isEmpty()) {
+            text = element.getAttribute("content-desc");
+        }
+
+        return text;
+    }
+
 
 
 }
