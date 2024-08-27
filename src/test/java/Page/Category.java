@@ -12,8 +12,7 @@ public class Category {
         assertTrue(ReusableMethods.ButtonEnableOrNot(nasheedCategory, driver), "Nasheed is not Enable");
         ReusableMethods.click(nasheedCategory,driver);
         ReusableMethods.click(tuneHeartChanel,driver);
-        ReusableMethods.waitForElementVisibility(videos,driver);
-        assertTrue(ReusableMethods.verifyElementsPresent(videos,driver),"Not a nisheed category");
+        assertTrue(ReusableMethods.waitUntilPerformIsDisplayAction(videos,driver),"Not a nisheed category");
 
     }
 
