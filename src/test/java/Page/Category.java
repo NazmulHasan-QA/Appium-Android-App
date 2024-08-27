@@ -12,8 +12,8 @@ public class Category {
         assertTrue(ReusableMethods.ButtonEnableOrNot(nasheedCategory, driver), "Nasheed is not Enable");
         ReusableMethods.click(nasheedCategory,driver);
         ReusableMethods.click(tuneHeartChanel,driver);
-        ReusableMethods.waitUntilPerformClickAction(playBackGajol,driver);
-        assertTrue(ReusableMethods.verifyElementsPresent(ramzenERGajol,driver),"Its not nasheed category");
+        ReusableMethods.waitForElementVisibility(videos,driver);
+        assertTrue(ReusableMethods.verifyElementsPresent(videos,driver),"Not a nisheed category");
 
     }
 
@@ -26,6 +26,13 @@ public class Category {
         ReusableMethods.waitForElementVisibility(playBackSura, driver);
         ReusableMethods.waitUntilPerformIsDisplayAction(playBackSura, driver);
         assertTrue(ReusableMethods.getTextFromMobileElements(playBackSuraYasin, driver).contains("SURAT YA-SIN"), "It not a sura");
+
+    }
+    public void verifyLectureContentCategory(AppiumDriver driver)
+    {
+        ReusableMethods.click(lectureCategory,driver);
+        ReusableMethods.waitUntilPerformClickAction(lectureChannel,driver);
+        assertTrue(ReusableMethods.verifyElementsPresent(professor,driver),"Not lecture category");
 
     }
 }
