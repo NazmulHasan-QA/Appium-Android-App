@@ -11,7 +11,7 @@ public class Video {
     public void playAndPushAVideo(AppiumDriver driver) {
         ReusableMethods.waitUntilPerformClickAction(tilawatCategory, driver);
         ReusableMethods.waitUntilPerformClickAction(tilawatContent,driver);
-        ReusableMethods.scrollIntoElementAndClick(suraMulk, driver);
+        ReusableMethods.waitUntilPerformClickAction(suraMulk, driver);
         ReusableMethods.waitUntilPerformClickAction(playBackSura, driver);
         assertTrue(ReusableMethods.waitUntilPerformIsDisplayAction(videoPlaySign, driver), "Video is not playing");
         ReusableMethods.click(totalVideoWindow, driver);
