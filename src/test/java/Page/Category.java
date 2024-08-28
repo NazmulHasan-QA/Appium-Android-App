@@ -38,7 +38,7 @@ public class Category {
     public void verifyOtherContentCategory(AppiumDriver driver)
     {
         assertTrue(ReusableMethods.ButtonEnableOrNot(otherCategory,driver),"Button is not Enable");
-        ReusableMethods.click(otherCategory,driver);
+        ReusableMethods.waitUntilPerformClickAction(otherCategory,driver);
         ReusableMethods.waitUntilPerformClickAction(otherChannel,driver);
         assertTrue(ReusableMethods.waitUntilPerformIsDisplayAction(otherContent,driver),"Not other category");
     }

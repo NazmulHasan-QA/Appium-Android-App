@@ -33,6 +33,7 @@ public class SearchField {
     }
     public  void verifySearchBySpecialCharacter(AppiumDriver driver)
     {
+        ReusableMethods.click(searchBox,driver);
         ReusableMethods.sendData(searchBox,driver,specialCharacter);
         ReusableMethods.waitUntilPerformClickAction(searchIcon,driver);
         assertTrue(ReusableMethods.waitUntilPerformIsDisplayAction(searchResult,driver),"Video found");
