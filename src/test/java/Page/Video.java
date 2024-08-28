@@ -24,11 +24,11 @@ public class Video {
         assertTrue(ReusableMethods.ButtonEnableOrNot(backWardButton, driver), "Video backward is not working");
         ReusableMethods.click(totalVideoWindow, driver);
         ReusableMethods.click(fastForwardButton,driver);
-        ReusableMethods.click(backWardButton,driver);
+        ReusableMethods.waitUntilPerformClickAction(backWardButton,driver);
     }
     public void verifyVideoResolutionOptions(AppiumDriver driver)
     {
-        ReusableMethods.click(threeDotButton,driver);
+        ReusableMethods.waitForElementVisibility(threeDotButton,driver);
         ReusableMethods.jsClick(videoQualityButton,driver);
         assertTrue(ReusableMethods.waitUntilPerformIsDisplayAction(videoQuality1,driver),"Video quality1 options is not present");
         assertTrue(ReusableMethods.waitUntilPerformIsDisplayAction(videoQuality2,driver),"Video quality2 options is not present");
