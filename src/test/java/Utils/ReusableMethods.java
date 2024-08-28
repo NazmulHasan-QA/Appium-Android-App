@@ -31,9 +31,10 @@ public class ReusableMethods {
         element.click();
     }
 
+
     public static void jsClick(By locator, AppiumDriver driver) {
         WebElement element = driver.findElement(locator);
-        JavascriptExecutor js = driver;
+        JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", element);
     }
 

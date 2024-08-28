@@ -11,7 +11,7 @@ public class Category {
     {
         assertTrue(ReusableMethods.ButtonEnableOrNot(nasheedCategory, driver), "Nasheed is not Enable");
         ReusableMethods.click(nasheedCategory,driver);
-        ReusableMethods.click(tuneHeartChanel,driver);
+        ReusableMethods.waitUntilPerformClickAction(tuneHutChanel,driver);
         assertTrue(ReusableMethods.waitUntilPerformIsDisplayAction(videos,driver),"Not a nisheed category");
 
     }
@@ -38,7 +38,7 @@ public class Category {
     {
         assertTrue(ReusableMethods.ButtonEnableOrNot(otherCategory,driver),"Button is not Enable");
         ReusableMethods.click(otherCategory,driver);
-        ReusableMethods.click(otherChannel,driver);
+        ReusableMethods.waitUntilPerformClickAction(otherChannel,driver);
         assertTrue(ReusableMethods.waitUntilPerformIsDisplayAction(otherContent,driver),"Not other category");
     }
 
