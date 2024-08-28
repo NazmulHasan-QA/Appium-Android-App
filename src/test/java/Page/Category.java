@@ -30,15 +30,14 @@ public class Category {
     public void verifyLectureContentCategory(AppiumDriver driver)
     {
         ReusableMethods.click(lectureCategory,driver);
-        ReusableMethods.waitForElementVisibility(lectureChannel,driver);
-        ReusableMethods.click(lectureChannel,driver);
+        ReusableMethods.waitUntilPerformClickAction(lectureChannel,driver);
         assertTrue(ReusableMethods.verifyElementsPresent(professor,driver),"Not lecture category");
 
     }
     public void verifyOtherContentCategory(AppiumDriver driver)
     {
         assertTrue(ReusableMethods.ButtonEnableOrNot(otherCategory,driver),"Button is not Enable");
-        ReusableMethods.waitUntilPerformClickAction(otherCategory,driver);
+        ReusableMethods.scrollIntoElementAndClick(otherCategory,driver);
         ReusableMethods.waitUntilPerformClickAction(otherChannel,driver);
         assertTrue(ReusableMethods.waitUntilPerformIsDisplayAction(otherContent,driver),"Not other category");
     }

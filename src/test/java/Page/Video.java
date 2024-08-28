@@ -30,7 +30,7 @@ public class Video {
     {
         ReusableMethods.waitForElementVisibility(threeDotButton,driver);
         ReusableMethods.click(threeDotButton,driver);
-        ReusableMethods.waitUntilPerformClickAction(videoQualityButton,driver);
+        ReusableMethods.scrollIntoElementAndClick(videoQualityButton,driver);
         assertTrue(ReusableMethods.waitUntilPerformIsDisplayAction(videoQuality1,driver),"Video quality1 options is not present");
         assertTrue(ReusableMethods.waitUntilPerformIsDisplayAction(videoQuality2,driver),"Video quality2 options is not present");
         assertTrue(ReusableMethods.waitUntilPerformIsDisplayAction(videoQuality3,driver),"Video quality3 options is not present");
