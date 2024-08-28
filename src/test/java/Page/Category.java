@@ -34,4 +34,12 @@ public class Category {
         assertTrue(ReusableMethods.verifyElementsPresent(professor,driver),"Not lecture category");
 
     }
+    public void verifyOtherContentCategory(AppiumDriver driver)
+    {
+        assertTrue(ReusableMethods.ButtonEnableOrNot(otherCategory,driver),"Button is not Enable");
+        ReusableMethods.click(otherCategory,driver);
+        ReusableMethods.click(otherChannel,driver);
+        assertTrue(ReusableMethods.waitUntilPerformIsDisplayAction(otherContent,driver),"Not other category");
+    }
+
 }

@@ -20,6 +20,11 @@ public class TC002CategoryTest extends Base{
     {
         categoryObj.verifyLectureContentCategory(driver);
     }
+    @Test(priority = 4)
+    public void verifyOtherContentCategoryTest()
+    {
+        categoryObj.verifyOtherContentCategory(driver);
+    }
 
 
 

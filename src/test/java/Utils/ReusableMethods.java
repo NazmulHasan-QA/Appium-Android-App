@@ -8,6 +8,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -172,13 +173,7 @@ public class ReusableMethods {
         element.clear();
     }
 
-    public static String getText(By path, AppiumDriver driver) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(path));
 
-        // Get the text of the element
-        return element.getText();
-    }
     public static String getOTPFromEmail(String host, String storeType,String user, String password) {
         // Retrieve environment variables
        //  user = System.getenv("EMAIL_USER");
@@ -263,6 +258,18 @@ public class ReusableMethods {
 
         return text;
     }
+    public static void doubleClick( By locator, AppiumDriver driver) {
+        try {
+            WebElement element = driver.findElement(locator);
+            Actions actions = new Actions(driver);
+            actions.doubleClick(element).perform();
+        } catch (Exception e) {
+            System.out.println("Failed to perform double-click: " + e.getMessage());
+        }
+    }
+
+
+
 
 
 

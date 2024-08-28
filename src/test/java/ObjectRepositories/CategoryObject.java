@@ -18,4 +18,10 @@ public class CategoryObject {
             "Tab 2 of 5\")");
     public static By lectureChannel = By.xpath("//android.widget.HorizontalScrollView/android.view.View[2]");
     public static By professor = AppiumBy.androidUIAutomator("new UiSelector().className(\"android.view.View\").instance(14)");
+    public static By otherCategory=AppiumBy.androidUIAutomator("new UiSelector().description(\"Others\n" +
+            "Tab 5 of 5\")");
+    public static By otherChannel=By.xpath("//android.widget.HorizontalScrollView/android.view.View[2]");
+    public static By otherContent=By.xpath("//android.view.View[@content-desc=\"14:32\n" +
+            "ইউনিভার্সিটিগুলো অসাম্প্রদায়িক নাকি ইসলামবিদ্বেষী? Muhammad Rafiuzzaman\n" +
+            "570 views  .   Mar 13, 2024\"]");
 }
