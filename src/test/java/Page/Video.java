@@ -29,6 +29,7 @@ public class Video {
     public void verifyVideoResolutionOptions(AppiumDriver driver)
     {
         ReusableMethods.waitForElementVisibility(threeDotButton,driver);
+        ReusableMethods.click(threeDotButton,driver);
         ReusableMethods.waitUntilPerformClickAction(videoQualityButton,driver);
         assertTrue(ReusableMethods.waitUntilPerformIsDisplayAction(videoQuality1,driver),"Video quality1 options is not present");
         assertTrue(ReusableMethods.waitUntilPerformIsDisplayAction(videoQuality2,driver),"Video quality2 options is not present");

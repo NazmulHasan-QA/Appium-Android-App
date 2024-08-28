@@ -31,7 +31,7 @@ public class Category {
     {
         ReusableMethods.click(lectureCategory,driver);
         ReusableMethods.waitForElementVisibility(lectureChannel,driver);
-        ReusableMethods.jsClick(lectureChannel,driver);
+        ReusableMethods.click(lectureChannel,driver);
         assertTrue(ReusableMethods.verifyElementsPresent(professor,driver),"Not lecture category");
 
     }
