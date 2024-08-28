@@ -10,7 +10,7 @@ public class VideoObject {
     public static By fastForwardButton = AppiumBy.androidUIAutomator("new UiSelector().className(\"android.view.View\").instance(8)");
     public static By backWardButton = AppiumBy.androidUIAutomator("new UiSelector().className(\"android.view.View\").instance(6)");
     public static By threeDotButton=AppiumBy.androidUIAutomator("new UiSelector().className(\"android.view.View\").instance(5)");
-    public static By videoQualityButton=AppiumBy.androidUIAutomator("new UiSelector().description(\"Quality\")");
+    public static By videoQualityButton=By.xpath("//android.view.View[@content-desc=\"Quality\"]");
     public static By videoQuality1=AppiumBy.androidUIAutomator("new UiSelector().description(\"352x240 ~184 KBit/s \")");
     public static By videoQuality2=AppiumBy.androidUIAutomator("new UiSelector().description(\"640x360 ~296 KBit/s \")");
     public static By videoQuality3=AppiumBy.androidUIAutomator("new UiSelector().description(\"842x480 ~496 KBit/s \")");

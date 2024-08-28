@@ -30,7 +30,8 @@ public class Category {
     public void verifyLectureContentCategory(AppiumDriver driver)
     {
         ReusableMethods.click(lectureCategory,driver);
-        ReusableMethods.waitUntilPerformClickAction(lectureChannel,driver);
+        ReusableMethods.waitForElementVisibility(lectureChannel,driver);
+        ReusableMethods.jsClick(lectureChannel,driver);
         assertTrue(ReusableMethods.verifyElementsPresent(professor,driver),"Not lecture category");
 
     }
