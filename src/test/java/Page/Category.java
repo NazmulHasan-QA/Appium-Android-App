@@ -21,7 +21,7 @@ public class Category {
         ReusableMethods.click(tilawatCategory, driver);
         ReusableMethods.waitForElementVisibility(tilawatContent,driver);
         assertTrue(ReusableMethods.verifyElementsPresent(tilawatContent, driver), "It not tilawat category");
-        ReusableMethods.scrollIntoElementAndClick(suraMulk, driver);
+        ReusableMethods.waitUntilPerformClickAction(suraMulk, driver);
         ReusableMethods.waitForElementVisibility(playBackSura, driver);
         ReusableMethods.waitUntilPerformIsDisplayAction(playBackSura, driver);
         assertTrue(ReusableMethods.getTextFromMobileElements(playBackSuraYasin, driver).contains("SURAT YA-SIN"), "It not a sura");
