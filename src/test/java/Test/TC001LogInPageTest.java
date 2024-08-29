@@ -3,14 +3,12 @@ package Test;
 import Page.LogInPage;
 import org.testng.annotations.Test;
 
-import static Test.Base.driver;
-
-public class TC001LogInTest extends Base {
-    LogInPage logObj=new LogInPage();
+public class TC001LogInPageTest extends Base {
+   LogInPage logObj=new LogInPage();
     @Test(priority = 1)
     public void openingApp()
     {
-             logObj.loginElementVerify(driver);
+        logObj.loginElementVerify(driver);
     }
     @Test(priority = 2)
     public void logInWithEmailTest()
@@ -19,8 +17,9 @@ public class TC001LogInTest extends Base {
         //git remote add origin
     }
     @Test(priority = 3)
-    public void nterInvalidPhoneFormatForOtpTest()
+    public void enterInvalidPhoneFormatForOtpTest()
     {
         logObj.enterInvalidPhoneFormatForOtp(driver);
     }
+
 }

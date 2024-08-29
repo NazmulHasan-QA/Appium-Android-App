@@ -4,7 +4,6 @@ import Utils.ReusableMethods;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import java.net.MalformedURLException;

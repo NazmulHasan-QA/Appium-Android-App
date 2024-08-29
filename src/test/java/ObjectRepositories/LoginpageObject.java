@@ -3,6 +3,10 @@ package ObjectRepositories;
 import Utils.ReusableMethods;
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import static Test.Base.driver;
+
 
 public class LoginpageObject {
     public static By permissionKey= AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.android.permissioncontroller:id/permission_allow_foreground_only_button\")");
