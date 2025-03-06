@@ -27,6 +27,7 @@ public class LogInPage {
         ReusableMethods.click(continueButton,driver);
         ReusableMethods.waitUntilPerformDataSendAction(otpInputtingField,driver,otp);
         ReusableMethods.click(continueButton,driver);
+        ReusableMethods.waitForElementVisibility(alertMessage,driver);
         assertTrue(ReusableMethods.verifyElementsPresent(alertMessage,driver),"Login Successfully");
 
     }
@@ -39,7 +40,9 @@ public class LogInPage {
         ReusableMethods.click(phoneField,driver);
         ReusableMethods.waitUntilPerformDataSendAction(phoneField,driver,invalidPhone);
         ReusableMethods.click(continueButton,driver);
-        assertFalse(ReusableMethods.verifyElementsPresent(confirmationMessage,driver),"Otp send");
+        ReusableMethods.waitUntilPerformDataSendAction(otpInputtingField,driver,otp);
+        ReusableMethods.click(continueButton,driver);
+        assertTrue(ReusableMethods.verifyElementsPresent(confirmationMessage,driver),"Otp send");
 
     }
 

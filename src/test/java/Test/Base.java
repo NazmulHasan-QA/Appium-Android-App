@@ -22,7 +22,7 @@ public class Base {
             capabilities.setCapability("deviceName", "emulator-5554");
             capabilities.setCapability("udid", "emulator-5554");
             capabilities.setCapability("platformName", "Android");
-            capabilities.setCapability("platformVersion", "14");
+            capabilities.setCapability("platformVersion", "15");
             capabilities.setCapability("automationName", "UiAutomator2");
             capabilities.setCapability("appPackage", "com.mahfil.app");
             capabilities.setCapability("appActivity", "com.mahfil.app.MainActivity");

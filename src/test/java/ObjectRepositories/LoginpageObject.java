@@ -23,7 +23,9 @@ public class LoginpageObject {
     public static By backButton=AppiumBy.androidUIAutomator("new UiSelector().className(\"android.view.View\").instance(5)");
     public static By loginWithMobile=AppiumBy.androidUIAutomator("new UiSelector().description(\"Log in with Mobile\")");
     public static By phoneField=AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.EditText\")");
-    public static By confirmationMessage=AppiumBy.androidUIAutomator("new UiSelector().description(\"OTP has been sent to your phone. Please check!\")");
+    public static By confirmationMessage=AppiumBy.androidUIAutomator("new UiSelector().description(\"OTP doesnt matched\")");
+
+
 
 
     //Data
