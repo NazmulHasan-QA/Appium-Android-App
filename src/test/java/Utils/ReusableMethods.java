@@ -138,7 +138,7 @@ public class ReusableMethods {
 
     public static void waitUntilPerformDataSendAction(By path, AppiumDriver driver, String text) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(path));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(path));
 
         // Perform an action on the element
         element.sendKeys(text); // Example action
